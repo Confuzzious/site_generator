@@ -54,7 +54,7 @@ def generate_page(from_path, template_path, dest_path, basepath):
     title_rep = template.replace("{{ Title }}", title)
     content_rep = title_rep.replace("{{ Content }}", html)
     content_rep = content_rep.replace('href="/', f'href="{basepath}')
-    content_rep = content_rep.replace('src"/', f'src="{basepath}')
+    content_rep = content_rep.replace('src="/', f'src="{basepath}')
 
     os.makedirs(os.path.dirname(dest_path), exist_ok=True)
     with open(dest_path, "w") as f:
