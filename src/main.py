@@ -27,7 +27,7 @@ def main():
         shutil.rmtree("docs")
     copy_static_to_public("static", "docs")
 
-    generate_pages_recursive("content", "template.html", "public", basepath)
+    generate_pages_recursive("content", "template.html", "docs", basepath)
 
 
 main()
